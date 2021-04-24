@@ -1,0 +1,57 @@
+---
+title: "test"
+date: 2019-01-01
+tags: [Data Science]
+header:
+    image: "/images/attributionqueries.JPG"
+excerpt: "Data Science"
+mathjax: "true"
+---
+
+# H1 Heading
+
+## H2 Heading
+
+### H3 Heading
+
+Here's some basic text.
+
+and here's some *italics*
+
+here's some **bold** text.
+
+what about a [link](https://github.com/limdata/portfolio)?
+
+Here's a bulleted list: 
+
+*First item
++second item
+-third item
+
+here's a numbered list:
+
+1.
+2.
+3.
+
+python code block:
+
+'''python
+    import numpy as np
+
+    def test_function(x,y):
+        z = np.sum(x,y)
+        return z 
+
+'''
+
+here is some inline code 'x+y'
+
+here's an image: 
+<img src="{{ site.url }}{{ site.baseurl }}/images/intro.jpg" alt="Intro to Python">
+
+here's some math:
+
+$$z=x+y$$
+
+you can also put in line
