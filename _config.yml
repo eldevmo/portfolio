@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Lim's Portfolio"
+title                    : "Hye Lim's Portfolio"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Lim"
@@ -109,7 +109,7 @@ analytics:
 author:
   name             : 
   avatar           : "/images/profile.png"
-  bio              : "**Full-Time Student** at **Algonquin College** in **Business Intelligence System Infrastructure**"
+  bio              : "**Junior Business Analyst, Business Intelligence Solution** at **Agriculture and Agri-Food Canada**"
                       
   location         : "Canada"
   email            :
