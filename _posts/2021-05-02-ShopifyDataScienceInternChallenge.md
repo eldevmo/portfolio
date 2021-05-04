@@ -202,9 +202,11 @@ shop_id is 100 and Revenue is 8547<br>
 <img src="{{ site.url }}{{ site.baseurl }}/images/shopify11.PNG" alt="shopify11.PNG">
 <img src="{{ site.url }}{{ site.baseurl }}/images/shopify12.PNG" alt="shopify12.PNG">
 
+**Dropped shop id 78 values in the dataframe**
+
        df3 = df2[df2.shop_id != 78] 
 
-**Dropped shop id 78 values in the dataframe**
+**Created a new dataframe to calculate RPV**
 
        shop_id_list = []
        revenue_list2 = []
@@ -224,19 +226,17 @@ shop_id is 100 and Revenue is 8547<br>
 
        df4 
 
-**Created a new dataframe to calculate RPV**
-
 <img src="{{ site.url }}{{ site.baseurl }}/images/shopify3.PNG" alt="shopify3.PNG">
 
 **c. What is its value?**
+
+**Added RPV column in the dataframe. Finally, there is no distinct data. The RPV values are found for each shop id**<br>
+**I chose to show RPV for each shop id since having this for each shop id is more accurate and able to check any outliers**
 
        Revenue_Per_Visitor = df4['revenue']/df4['uniqueCustomerCount']
        pd.set_option("max_rows", None)
        df4['Revenue_Per_Visitor'] = Revenue_Per_Visitor
        df4
-
-**Added RPV column in the dataframe. Finally, there is no distinct data. The RPV values are found for each shop id**
-**I chose to show RPV for each shop id since having this for each shop id is more accurate and able to check any outliers**
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/shopify13.PNG" alt="shopify13.PNG">
 <img src="{{ site.url }}{{ site.baseurl }}/images/shopify14.PNG" alt="shopify14.PNG">
