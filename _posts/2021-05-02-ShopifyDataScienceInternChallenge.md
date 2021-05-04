@@ -229,6 +229,7 @@ shop_id is 100 and Revenue is 8547<br>
        pd.set_option("max_rows", None)
        df4['Revenue_Per_Visitor'] = Revenue_Per_Visitor
        df4
+       
 **Added RPV column in the dataframe. Finally, there is no distinct data. The RPV values are found for each shop id**
 **I chose to show RPV for each shop id since having this for each shop id is more accurate and able to check any outliers**
 
