@@ -24,7 +24,7 @@ hidden: "true"
        df = pd.read_excel(r'C:\Users\Lim\Desktop\resume\2021 Winter Data Science Intern Challenge Data Set.xlsx', encoding="ISO-8859-1")
        df.describe()
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/shopify7.png" alt="shopify7.png">
+<img src="{{ site.url }}{{ site.baseurl }}/images/shopify7.PNG" alt="shopify7.PNG">
 
 **As it is mentioned in the given file, the AOV is $3145.13**
 
