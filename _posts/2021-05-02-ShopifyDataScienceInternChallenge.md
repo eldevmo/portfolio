@@ -26,7 +26,7 @@ hidden: "true"
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/shopify7.PNG" alt="shopify7.PNG">
 
-**As it is mentioned in the given file, It is found that the AOV is $3145.13.**
+**As it is mentioned in the given file, It is shown in the summary statistics that the AOV is $3145.13.**
 
 **To check any outliers, columns are plotted.**
        
@@ -206,7 +206,7 @@ shop_id is 100 and Revenue is 8547<br>
 <img src="{{ site.url }}{{ site.baseurl }}/images/shopify11.PNG" alt="shopify11.PNG">
 <img src="{{ site.url }}{{ site.baseurl }}/images/shopify12.PNG" alt="shopify12.PNG">
 
-**Dropped shop id 78 values in the dataframe.**
+**Dropped shop id 78 values in the dataframe.**<br>
 
        df3 = df2[df2.shop_id != 78] 
 
