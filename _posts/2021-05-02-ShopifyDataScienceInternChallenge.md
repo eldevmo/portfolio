@@ -24,7 +24,7 @@ hidden: "true"
        df = pd.read_excel(r'C:\Users\Lim\Desktop\resume\2021 Winter Data Science Intern Challenge Data Set.xlsx', encoding="ISO-8859-1")
        df.describe()
 
- 	order_id 	shop_id 	    user_id 	           order_amount 	       total_items<br>
+order_id 	shop_id 	    user_id 	           order_amount 	       total_items<br>
 count 	5000.000000 	5000.000000 	    5000.000000 	    5000.000000 	       5000.00000<br>
 mean 	2500.500000 	50.078800 	    849.092400 	    3145.128000 	       8.78720<br>
 std 	1443.520003 	29.006118 	    87.798982 	    41282.539349 	       116.32032<br>
@@ -202,7 +202,7 @@ shop_id is 100 and Revenue is 8547<br>
 45<br>
 50306.666666666664<br>
 
-	order_id 	shop_id 	user_id 	order_amount 	total_items 	payment_method 	created_at<br>
+order_id 	shop_id 	user_id 	order_amount 	total_items 	payment_method 	created_at<br>
 160 	161 	       78 	       990 	       25725 	       1 	       credit_card 	       2017-03-12 05:56:56.834<br>
 490 	491 	       78 	       936 	       51450 	       2 	       debit 	              2017-03-26 17:08:18.911<br>
 493 	494 	       78 	       983 	       51450 	       2 	       cash 	              2017-03-16 21:39:35.400<br>
@@ -251,6 +251,7 @@ shop_id is 100 and Revenue is 8547<br>
 4918 	4919 	       78     	823    	25725  	1      	cash          	2017-03-15 13:26:46.262<br>
 
        df3 = df2[df2.shop_id != 78] 
+
 **Dropped shop id 78 values in the dataframe**
 
        shop_id_list = []
@@ -284,7 +285,7 @@ shop_id is 100 and Revenue is 8547<br>
 **Added RPV column in the dataframe. Finally, there is no distinct data. The RPV values are found for each shop id**
 **I chose to show RPV for each shop id since having this for each shop id is more accurate and able to check any outliers**
 
-       shop_id 	revenue 	uniqueCustomerCount 	Revenue_Per_Visitor<br>
+shop_id 	revenue 	uniqueCustomerCount 	Revenue_Per_Visitor<br>
 0 	1 	       13588 	       42 	              323.523810<br>
 1 	2 	       9588   	51 	              188.000000<br>
 2 	3 	       14652  	48     	       305.250000<br>
