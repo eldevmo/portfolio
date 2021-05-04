@@ -56,8 +56,8 @@ hidden: "true"
 **I chose to report RPV (Revenue_Per_Visitor) since this gives a better idea of the overall health of a eCommerce store**
 **RPV is a metric where Conversion rate and Average order value are combined, RPV = Total Revenue / Total Unique Visitors**
 
-**Calculated Revenues for each shop to get RPV**
-
+**Calculated Revenues for each shop to get RPV**<br>
+**Shop id 78 has the max. revenue, $2263800, which seems much higher than other shops**
        revenue_list = []
        uniqueShopidCount = len(df2['shop_id'].unique())
 
@@ -167,30 +167,30 @@ shop_id is 98 and Revenue is 14231<br>
 shop_id is 99 and Revenue is 18330<br>
 shop_id is 100 and Revenue is 8547<br>
 
+**Max. revenue is 2263800 in this dataframe**
+
        len(range(uniqueShopidCount))
        revenue_max = np.max(revenue_list)
        print(revenue_max) 
 
-**Max. revenue is 2263800 - shop id 78 has the max. revenue**
+**Unique customers are printed for shop id 78**
 
        uniqueCustomer_78shopId = df2.loc[df2['shop_id'] == 78, 'user_id'].unique()
        print(uniqueCustomer_78shopId) 
 
-**Unique customers are printed for shop id 78**
+**Counted number of unique customers**
 
        countCustomer_78shopId = len(uniqueCustomer_78shopId)
        print(countCustomer_78shopId) 
 
-**Counted number of unique customers**
+**RPV found is over $50306.67 which seems not right**
 
        Revenue_Per_Visitor_78shopId = revenue_max/countCustomer_78shopId
        print(Revenue_Per_Visitor_78shopId) 
 
-**RPV found is over $50306.67 which seems not right**
+**Checked the order_amount for shop id 78; it turns out that per pair of shoes, the price is over $25725 so I decided to drop shop id 78**
 
        df2.loc[df['shop_id'] == 78] 
-
-**Checked the order_amount for shop id 78; it turns out that per pair of shoes, the price is over $25725 so I decided to drop shop id 78**
 
 2263800<br>
 [990 936 983 967 760 878 800 944 970 775 867 912 812 810 855 709 834 707<br>
