@@ -47,7 +47,7 @@ hidden: "true"
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/shopify2.PNG" alt="shopify2.PNG">
 
-**Drop the outliers to verify the data properly**
+**Droped the outliers to verify the data properly**
 
        df2 = df.drop([15, 60, 520, 1104, 1362, 1436, 1562, 1602, 2153, 2297, 2835, 2969, 3332, 4056, 4646, 4868, 4882])
 
