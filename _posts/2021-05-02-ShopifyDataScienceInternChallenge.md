@@ -26,38 +26,38 @@ hidden: "true"
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/shopify7.PNG" alt="shopify7.PNG">
 
-**As it is mentioned in the given file, the AOV is $3145.13**
+**As it is mentioned in the given file, the AOV is $3145.13.**
 
-**To check any outliers, columns are plotted**
+**To check any outliers, columns are plotted.**
        
        sns.set(style = "ticks")
        sns.pairplot(df)
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/shopify1.png" alt="shopify1.png">
 
-**It is found that there is a distinct dot where total_times is greater than 1500 and order_amount is lower than 500000**
+**It is found that there is a distinct dot where total_times is greater than 1500 and order_amount is lower than 500000.**
 
        print(np.where((df['total_items'] > 1500) & (df['order_amount'] > 500000)))
 
 (array([  15,   60,  520, 1104, 1362, 1436, 1562, 1602, 2153, 2297, 2835, 2969, 3332, 4056, 4646, 4868, 4882], dtype=int64),)
 
-**It is found that these indexes are outliers**
+**It is found that these indexes are outliers.**
 
        df.iloc[[  15,   60,  520, 1104, 1362, 1436, 1562, 1602, 2153, 2297, 2835, 2969, 3332, 4056, 4646, 4868, 4882]]
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/shopify2.PNG" alt="shopify2.PNG">
 
-**Droped the outliers to verify the data properly**
+**Droped the outliers to verify the data properly.**
 
        df2 = df.drop([15, 60, 520, 1104, 1362, 1436, 1562, 1602, 2153, 2297, 2835, 2969, 3332, 4056, 4646, 4868, 4882])
 
-**b. What metric would you report for this dataset?**
+**b. What metric would you report for this dataset?.**
 
-**I chose to report RPV (Revenue_Per_Visitor) since this gives a better idea of the overall health of a eCommerce store**<br>
-**RPV is a metric where Conversion rate and Average order value are combined, RPV = Total Revenue / Total Unique Visitors**<br>
+**I chose to report RPV (Revenue_Per_Visitor) since this gives a better idea of the overall health of a eCommerce store.**<br>
+**RPV is a metric where Conversion rate and Average order value are combined, RPV = Total Revenue / Total Unique Visitors.**<br>
 
-**Calculated Revenues for each shop to get RPV**<br>
-**Shop id 78 has the max. revenue, $2263800, which seems much higher than other shops**
+**Calculated Revenues for each shop to get RPV.**<br>
+**Shop id 78 has the max. revenue, $2263800, which seems much higher than other shops.**
 
        revenue_list = []
        uniqueShopidCount = len(df2['shop_id'].unique())
@@ -168,28 +168,28 @@ shop_id is 98 and Revenue is 14231<br>
 shop_id is 99 and Revenue is 18330<br>
 shop_id is 100 and Revenue is 8547<br>
 
-**Max. revenue is 2263800 in this dataframe**
+**Max. revenue is 2263800 in this dataframe.**
 
        len(range(uniqueShopidCount))
        revenue_max = np.max(revenue_list)
        print(revenue_max) 
 
-**Unique customers are printed for shop id 78**
+**Unique customers are printed for shop id 78.**
 
        uniqueCustomer_78shopId = df2.loc[df2['shop_id'] == 78, 'user_id'].unique()
        print(uniqueCustomer_78shopId) 
 
-**Counted number of unique customers**
+**Counted number of unique customers.**
 
        countCustomer_78shopId = len(uniqueCustomer_78shopId)
        print(countCustomer_78shopId) 
 
-**RPV found is over $50306.67 which seems not right**
+**RPV found is over $50306.67 which seems not right.**
 
        Revenue_Per_Visitor_78shopId = revenue_max/countCustomer_78shopId
        print(Revenue_Per_Visitor_78shopId) 
 
-**Checked the order_amount for shop id 78; it turns out that per pair of shoes, the price is over $25725 so I decided to drop shop id 78**
+**Checked the order_amount for shop id 78; it turns out that per pair of shoes, the price is over $25725 so I decided to drop shop id 78.**
 
        df2.loc[df['shop_id'] == 78] 
 
@@ -203,11 +203,11 @@ shop_id is 100 and Revenue is 8547<br>
 <img src="{{ site.url }}{{ site.baseurl }}/images/shopify11.PNG" alt="shopify11.PNG">
 <img src="{{ site.url }}{{ site.baseurl }}/images/shopify12.PNG" alt="shopify12.PNG">
 
-**Dropped shop id 78 values in the dataframe**
+**Dropped shop id 78 values in the dataframe.**
 
        df3 = df2[df2.shop_id != 78] 
 
-**Created a new dataframe to calculate RPV**
+**Created a new dataframe to calculate RPV.**
 
        shop_id_list = []
        revenue_list2 = []
@@ -231,8 +231,8 @@ shop_id is 100 and Revenue is 8547<br>
 
 **c. What is its value?**
 
-**Added RPV column in the dataframe. Finally, there is no distinct data. The RPV values are found for each shop id**<br>
-**I chose to show RPV for each shop id since having this for each shop id is more accurate and able to check any outliers**
+**Added RPV column in the dataframe. Finally, there is no distinct data. The RPV values are found for each shop id.**<br>
+**I chose to show RPV for each shop id since having this for each shop id is more accurate and able to check any outliers.**
 
        Revenue_Per_Visitor = df4['revenue']/df4['uniqueCustomerCount']
        pd.set_option("max_rows", None)
