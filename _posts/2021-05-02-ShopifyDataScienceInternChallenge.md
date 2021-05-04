@@ -247,6 +247,10 @@ shop_id is 100 and Revenue is 8547<br>
 <img src="{{ site.url }}{{ site.baseurl }}/images/shopify15.PNG" alt="shopify15.PNG">
 <img src="{{ site.url }}{{ site.baseurl }}/images/shopify16.PNG" alt="shopify16.PNG">
 
+**Here is the additional information regarding RPV.**
+       df4.describe()
+<img src="{{ site.url }}{{ site.baseurl }}/images/shopify17.PNG" alt="shopify17.PNG">
+
 
 ### Question 2
 
