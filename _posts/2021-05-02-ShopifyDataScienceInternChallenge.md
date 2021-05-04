@@ -168,7 +168,7 @@ shop_id is 98 and Revenue is 14231<br>
 shop_id is 99 and Revenue is 18330<br>
 shop_id is 100 and Revenue is 8547<br>
 
-**Max. revenue is 2263800 in this dataframe.**
+**Max. revenue is 2263800 in this dataframe where shop id is 78.**
 
        len(range(uniqueShopidCount))
        revenue_max = np.max(revenue_list)
