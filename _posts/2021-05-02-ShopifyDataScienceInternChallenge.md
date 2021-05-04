@@ -37,22 +37,26 @@ max 	5000.000000 	100.000000 	    999.000000 	    704000.000000 	       2000.000
 **As it is mentioned in the given file, the AOV is $3145.13**
 
 **To check any outliers, columns are plotted**
+       
        sns.set(style = "ticks")
        sns.pairplot(df)
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/shopify1.png" alt="shopify1.png">
 
 **It is found that there is a distinct dot where total_times is greater than 1500 and order_amount is lower than 500000**
+
        print(np.where((df['total_items'] > 1500) & (df['order_amount'] > 500000)))
 
 (array([  15,   60,  520, 1104, 1362, 1436, 1562, 1602, 2153, 2297, 2835, 2969, 3332, 4056, 4646, 4868, 4882], dtype=int64),)
 
 **It is found that these indexes are outliers**
+
        df.iloc[[  15,   60,  520, 1104, 1362, 1436, 1562, 1602, 2153, 2297, 2835, 2969, 3332, 4056, 4646, 4868, 4882]]
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/shopify2.PNG" alt="shopify2.PNG">
 
 **Drop the outliers to verify the data properly**
+
        df2 = df.drop([15, 60, 520, 1104, 1362, 1436, 1562, 1602, 2153, 2297, 2835, 2969, 3332, 4056, 4646, 4868, 4882])
 
 **b. What metric would you report for this dataset?**
@@ -61,6 +65,7 @@ max 	5000.000000 	100.000000 	    999.000000 	    704000.000000 	       2000.000
 **RPV is a metric where Conversion rate and Average order value are combined, RPV = Total Revenue / Total Unique Visitors**
 
 **Calculated Revenues for each shop to get RPV**
+
        revenue_list = []
        uniqueShopidCount = len(df2['shop_id'].unique())
 
