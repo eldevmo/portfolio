@@ -266,7 +266,7 @@ b. What is the last name of the employee with the most orders? - **Peacook with 
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/shopify5.PNG" alt="shopify5.PNG">
 
-c. What product was ordered the most by customers in Germany? **Boston Crab Meat was ordered the most in Germany with 160 sold**
+c. What product was ordered the most by customers in Germany? - **Boston Crab Meat was ordered the most in Germany with 160 sold**
 
        SELECT TOP 1 Products.ProductID, Products.ProductName, SUM(OrderDetails.Quantity) AS NumberOfProductsSold
        from Products, OrderDetails, Orders, Customers
