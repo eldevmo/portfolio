@@ -40,7 +40,7 @@ max 	5000.000000 	100.000000 	    999.000000 	    704000.000000 	       2000.000
        sns.set(style = "ticks")
        sns.pairplot(df)
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/graph6.png" alt="shopify1.png">
+<img src="{{ site.url }}{{ site.baseurl }}/images/shopify1.png" alt="shopify1.png">
 
 **It is found that there is a distinct dot where total_times is greater than 1500 and order_amount is lower than 500000**
        print(np.where((df['total_items'] > 1500) & (df['order_amount'] > 500000)))
@@ -52,7 +52,7 @@ max 	5000.000000 	100.000000 	    999.000000 	    704000.000000 	       2000.000
        df.iloc[[  15,   60,  520, 1104, 1362, 1436, 1562, 1602, 2153, 2297, 2835,
               2969, 3332, 4056, 4646, 4868, 4882]]
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/graph6.png" alt="shopify2.png">
+<img src="{{ site.url }}{{ site.baseurl }}/images/shopify2.png" alt="shopify2.png">
 
 **Drop the outliers to verify the data properly**
        df2 = df.drop([15, 60, 520, 1104, 1362, 1436, 1562, 1602, 2153, 2297, 2835,
@@ -271,7 +271,7 @@ shop_id is 100 and Revenue is 8547
 
 **Created a new dataframe to calculate RPV**
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/graph6.png" alt="shopify3.png">
+<img src="{{ site.url }}{{ site.baseurl }}/images/shopify3.png" alt="shopify3.png">
 
 **c. What is its value?**
 
@@ -391,7 +391,7 @@ a. How many orders were shipped by Speedy Express in total?
 
        SELECT COUNT(OrderID) AS OrderCount FROM Orders INNER JOIN Shippers ON Shippers.ShipperID = Orders.ShipperID WHERE Shippers.ShipperName = 'Speedy Express';
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/graph6.png" alt="shopify4.png">
+<img src="{{ site.url }}{{ site.baseurl }}/images/shopify4.png" alt="shopify4.png">
 
 b. What is the last name of the employee with the most orders?
 
@@ -401,7 +401,7 @@ b. What is the last name of the employee with the most orders?
        GROUP BY Employees.EmployeeID, Employees.LastName
        ORDER BY COUNT(OrderID) DESC
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/graph6.png" alt="shopify5.png">
+<img src="{{ site.url }}{{ site.baseurl }}/images/shopify5.png" alt="shopify5.png">
 
 c. What product was ordered the most by customers in Germany?
 
@@ -414,5 +414,5 @@ c. What product was ordered the most by customers in Germany?
        GROUP BY Products.ProductID, Products.ProductName
        ORDER BY SUM(OrderDetails.Quantity) DESC
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/graph6.png" alt="shopify6.png">
+<img src="{{ site.url }}{{ site.baseurl }}/images/shopify6.png" alt="shopify6.png">
 
