@@ -173,32 +173,34 @@ shop_id is 100 and Revenue is 8547<br>
        len(range(uniqueShopidCount))
        revenue_max = np.max(revenue_list)
        print(revenue_max) 
+2263800<br>
 
 **Unique customers are printed for shop id 78.**
 
        uniqueCustomer_78shopId = df2.loc[df2['shop_id'] == 78, 'user_id'].unique()
        print(uniqueCustomer_78shopId) 
 
+[990 936 983 967 760 878 800 944 970 775 867 912 812 810 855 709 834 707<br>
+ 935 861 915 962 890 869 814 817 740 910 745 927 928 982 828 766 889 852<br>
+ 946 787 960 756 969 866 997 818 823]<br>
+
 **Counted number of unique customers.**
 
        countCustomer_78shopId = len(uniqueCustomer_78shopId)
        print(countCustomer_78shopId) 
+
+45<br>
 
 **RPV found is over $50306.67 which seems not right.**
 
        Revenue_Per_Visitor_78shopId = revenue_max/countCustomer_78shopId
        print(Revenue_Per_Visitor_78shopId) 
 
+50306.666666666664<br>
+
 **Checked the order_amount for shop id 78; it turns out that per pair of shoes, the price is over $25725 so I decided to drop shop id 78.**
 
        df2.loc[df['shop_id'] == 78] 
-
-2263800<br>
-[990 936 983 967 760 878 800 944 970 775 867 912 812 810 855 709 834 707<br>
- 935 861 915 962 890 869 814 817 740 910 745 927 928 982 828 766 889 852<br>
- 946 787 960 756 969 866 997 818 823]<br>
-45<br>
-50306.666666666664<br>
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/shopify11.PNG" alt="shopify11.PNG">
 <img src="{{ site.url }}{{ site.baseurl }}/images/shopify12.PNG" alt="shopify12.PNG">
