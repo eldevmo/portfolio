@@ -24,15 +24,7 @@ hidden: "true"
        df = pd.read_excel(r'C:\Users\Lim\Desktop\resume\2021 Winter Data Science Intern Challenge Data Set.xlsx', encoding="ISO-8859-1")
        df.describe()
 
-order_id 	shop_id 	    user_id 	           order_amount 	       total_items<br>
-count 	5000.000000 	5000.000000 	    5000.000000 	    5000.000000 	       5000.00000<br>
-mean 	2500.500000 	50.078800 	    849.092400 	    3145.128000 	       8.78720<br>
-std 	1443.520003 	29.006118 	    87.798982 	    41282.539349 	       116.32032<br>
-min 	1.000000 	1.000000 	    607.000000 	    90.000000 	       1.00000<br>
-25% 	1250.750000 	24.000000 	    775.000000 	    163.000000 	       1.00000<br>
-50% 	2500.500000 	50.000000 	    849.000000 	    284.000000 	       2.00000<br>
-75% 	3750.250000 	75.000000 	    925.000000 	    390.000000 	       3.00000<br>
-max 	5000.000000 	100.000000 	    999.000000 	    704000.000000 	       2000.00000<br>
+<img src="{{ site.url }}{{ site.baseurl }}/images/shopify7.png" alt="shopify7.png">
 
 **As it is mentioned in the given file, the AOV is $3145.13**
 
@@ -202,53 +194,7 @@ shop_id is 100 and Revenue is 8547<br>
 45<br>
 50306.666666666664<br>
 
-order_id 	shop_id 	user_id 	order_amount 	total_items 	payment_method 	created_at<br>
-160 	161 	       78 	       990 	       25725 	       1 	       credit_card 	       2017-03-12 05:56:56.834<br>
-490 	491 	       78 	       936 	       51450 	       2 	       debit 	              2017-03-26 17:08:18.911<br>
-493 	494 	       78 	       983 	       51450 	       2 	       cash 	              2017-03-16 21:39:35.400<br>
-511 	512 	       78 	       967 	       51450 	       2 	       cash 	              2017-03-09 07:23:13.640<br>
-617 	618 	       78 	       760 	       51450 	       2 	       cash 	              2017-03-18 11:18:41.848<br>
-691 	692 	       78 	       878 	       154350 	6 	       debit 	              017-03-27 22:51:43.203<br>
-1056 	1057 	       78 	       800 	       25725 	       1 	       debit 	              2017-03-15 10:16:44.830<br>
-1193 	1194 	       78 	       944 	       25725 	       1 	       debit 	              2017-03-16 16:38:25.551<br>
-1204 	1205 	       78 	       970 	       25725 	       1 	       credit_card 	       2017-03-17 22:32:21.438<br>
-1259 	1260 	       78 	       775 	       77175 	       3 	       credit_card 	       2017-03-27 09:27:19.843<br>
-1384 	1385 	       78 	       867 	       25725 	       1 	       cash 	              2017-03-17 16:38:06.279<br>
-1419 	1420 	       78 	       912 	       25725 	       1 	       cash 	              2017-03-30 12:23:42.551<br>
-1452 	1453 	       78 	       812 	       25725 	       1 	       credit_card 	       2017-03-17 18:09:54.089<br>
-1529 	1530 	       78 	       810 	       51450 	       2 	       cash 	              2017-03-29 07:12:01.466<br>
-2270 	2271 	       78 	       855 	       25725  	1 	       credit_card   	2017-03-14 23:58:21.635<br>
-2452 	2453   	78 	       709 	       51450  	2 	       cash          	2017-03-27 11:04:04.363<br>
-2492 	2493   	78 	       834    	102900 	4 	       debit          	2017-03-04 04:37:33.848<br>
-2495 	2496   	78     	707    	51450  	2 	       cash 	              2017-03-26 04:38:52.497<br>
-2512 	2513   	78     	935    	51450 	       2 	       debit         	2017-03-18 18:57:13.421<br>
-2548 	2549   	78     	861    	25725  	1 	       cash           	2017-03-17 19:35:59.663<br>
-2564 	2565 	       78 	       915    	77175   	3      	debit          	2017-03-25 01:19:35.410<br>
-2690 	2691   	78     	962 	       77175  	3 	       debit          	2017-03-22 07:33:25.104<br>
-2773 	2774 	       78     	890 	       25725  	1 	       cash          	2017-03-26 10:36:43.445<br>
-2818 	2819   	78 	       869    	51450   	2 	       debit          	2017-03-17 06:25:50.921<br>
-2821 	2822   	78 	       814 	       51450  	2 	       cash 	              2017-03-02 17:13:25.271<br>
-2906 	2907 	       78 	       817 	       77175  	3      	debit  	       2017-03-16 03:45:46.089<br>
-2922 	2923   	78 	       740 	       25725   	1      	debit 	              2017-03-12 20:10:58.008<br>
-3085 	3086   	78     	910     	25725   	1 	       cash          	2017-03-26 01:59:26.748<br>
-3101 	3102   	78     	855    	51450  	2 	       credit_card 	       2017-03-21 05:10:34.147<br>
-3151 	3152 	       78 	       745 	       25725 	       1 	       credit_card    	2017-03-18 13:13:07.198<br>
-3167 	3168   	78 	       927     	51450 	       2      	cash 	              2017-03-12 12:23:07.516<br>
-3403 	3404 	       78 	       928 	       77175 	       3      	debit         	2017-03-16 09:45:04.544<br>
-3440 	3441 	       78     	982    	25725   	1 	       debit 	              2017-03-19 19:02:53.732<br>
-3705 	3706   	78     	828    	51450  	2 	       credit_card 	       2017-03-14 20:43:14.502<br>
-3724 	3725 	       78 	       766 	       77175  	3      	credit_card 	       2017-03-16 14:13:25.868<br>
-3780 	3781 	       78     	889    	25725  	1      	cash          	2017-03-11 21:14:49.542<br>
-4040 	4041 	       78     	852    	25725  	1      	cash           	2017-03-02 14:31:11.566<br>
-4079 	4080   	78 	       946 	       51450 	       2      	cash 	              2017-03-20 21:13:59.919<br>
-4192 	4193   	78     	787     	77175  	3 	       credit_card   	2017-03-18 09:25:31.863<br>
-4311 	4312 	       78     	960 	       51450  	2      	debit 	              2017-03-01 03:02:10.223<br>
-4412 	4413 	       78 	       756    	51450  	2 	       debit         	2017-03-02 04:13:38.530<br>
-4420 	4421   	78     	969 	       77175  	3 	       debit 	              2017-03-09 15:21:34.551<br>
-4505 	4506   	78     	866 	       25725   	1 	       debit 	              2017-03-22 22:06:00.804<br>
-4584 	4585   	78     	997 	       25725 	       1      	cash          	2017-03-25 21:48:43.570<br>
-4715 	4716 	       78 	       818 	       77175   	3 	       debit 	              2017-03-05 05:10:43.633<br>
-4918 	4919 	       78     	823    	25725  	1      	cash          	2017-03-15 13:26:46.262<br>
+<img src="{{ site.url }}{{ site.baseurl }}/images/shopify8.PNG" alt="shopify8.PNG">
 
        df3 = df2[df2.shop_id != 78] 
 
@@ -284,6 +230,9 @@ order_id 	shop_id 	user_id 	order_amount 	total_items 	payment_method 	created_a
        df4
 **Added RPV column in the dataframe. Finally, there is no distinct data. The RPV values are found for each shop id**
 **I chose to show RPV for each shop id since having this for each shop id is more accurate and able to check any outliers**
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/shopify9.png" alt="shopify9.png">
+<img src="{{ site.url }}{{ site.baseurl }}/images/shopify10.png" alt="shopify10.png">
 
 shop_id 	revenue 	uniqueCustomerCount 	Revenue_Per_Visitor<br>
 0 	1 	       13588 	       42 	              323.523810<br>
