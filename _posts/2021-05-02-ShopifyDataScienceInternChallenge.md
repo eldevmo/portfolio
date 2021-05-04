@@ -194,7 +194,8 @@ shop_id is 100 and Revenue is 8547<br>
 45<br>
 50306.666666666664<br>
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/shopify8.PNG" alt="shopify8.PNG">
+<img src="{{ site.url }}{{ site.baseurl }}/images/shopify11.PNG" alt="shopify11.PNG">
+<img src="{{ site.url }}{{ site.baseurl }}/images/shopify12.PNG" alt="shopify12.PNG">
 
        df3 = df2[df2.shop_id != 78] 
 
@@ -231,8 +232,10 @@ shop_id is 100 and Revenue is 8547<br>
 **Added RPV column in the dataframe. Finally, there is no distinct data. The RPV values are found for each shop id**
 **I chose to show RPV for each shop id since having this for each shop id is more accurate and able to check any outliers**
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/shopify9.png" alt="shopify9.png">
-<img src="{{ site.url }}{{ site.baseurl }}/images/shopify10.png" alt="shopify10.png">
+<img src="{{ site.url }}{{ site.baseurl }}/images/shopify13.png" alt="shopify13.png">
+<img src="{{ site.url }}{{ site.baseurl }}/images/shopify14.png" alt="shopify14.png">
+<img src="{{ site.url }}{{ site.baseurl }}/images/shopify15.png" alt="shopify15.png">
+<img src="{{ site.url }}{{ site.baseurl }}/images/shopify16.png" alt="shopify16.png">
 
 shop_id 	revenue 	uniqueCustomerCount 	Revenue_Per_Visitor<br>
 0 	1 	       13588 	       42 	              323.523810<br>
