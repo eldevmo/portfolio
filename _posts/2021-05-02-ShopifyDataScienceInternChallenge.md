@@ -26,7 +26,7 @@ hidden: "true"
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/shopify7.PNG" alt="shopify7.PNG">
 
-**As it is mentioned in the given file, the AOV is $3145.13.**
+**As it is mentioned in the given file, It is found that the AOV is $3145.13.**
 
 **To check any outliers, columns are plotted.**
        
@@ -35,7 +35,7 @@ hidden: "true"
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/shopify1.png" alt="shopify1.png">
 
-**It is found that there is a distinct dot where total_times is greater than 1500 and order_amount is lower than 500000.**
+**It is found that there is a distinct dot where total_items is greater than 1500 and order_amount is lower than 500000.**
 
        print(np.where((df['total_items'] > 1500) & (df['order_amount'] > 500000)))
 
