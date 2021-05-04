@@ -170,21 +170,26 @@ shop_id is 100 and Revenue is 8547<br>
        len(range(uniqueShopidCount))
        revenue_max = np.max(revenue_list)
        print(revenue_max) 
+
 **Max. revenue is 2263800 - shop id 78 has the max. revenue**
 
        uniqueCustomer_78shopId = df2.loc[df2['shop_id'] == 78, 'user_id'].unique()
        print(uniqueCustomer_78shopId) 
+
 **Unique customers are printed for shop id 78**
 
        countCustomer_78shopId = len(uniqueCustomer_78shopId)
        print(countCustomer_78shopId) 
+
 **Counted number of unique customers**
 
        Revenue_Per_Visitor_78shopId = revenue_max/countCustomer_78shopId
        print(Revenue_Per_Visitor_78shopId) 
+
 **RPV found is over $50306.67 which seems not right**
 
        df2.loc[df['shop_id'] == 78] 
+
 **Checked the order_amount for shop id 78; it turns out that per pair of shoes, the price is over $25725 so I decided to drop shop id 78**
 
 2263800<br>
