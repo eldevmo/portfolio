@@ -173,6 +173,7 @@ shop_id is 100 and Revenue is 8547<br>
        len(range(uniqueShopidCount))
        revenue_max = np.max(revenue_list)
        print(revenue_max) 
+
 2263800<br>
 
 **Unique customers are printed for shop id 78.**
