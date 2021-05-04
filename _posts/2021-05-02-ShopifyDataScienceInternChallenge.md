@@ -53,11 +53,12 @@ hidden: "true"
 
 **b. What metric would you report for this dataset?**
 
-**I chose to report RPV (Revenue_Per_Visitor) since this gives a better idea of the overall health of a eCommerce store**
+**I chose to report RPV (Revenue_Per_Visitor) since this gives a better idea of the overall health of a eCommerce store**<br>
 **RPV is a metric where Conversion rate and Average order value are combined, RPV = Total Revenue / Total Unique Visitors**
 
 **Calculated Revenues for each shop to get RPV**<br>
 **Shop id 78 has the max. revenue, $2263800, which seems much higher than other shops**
+
        revenue_list = []
        uniqueShopidCount = len(df2['shop_id'].unique())
 
