@@ -210,7 +210,7 @@ shop_id is 100 and Revenue is 8547<br>
 
        df3 = df2[df2.shop_id != 78] 
 
-**Created a new dataframe to calculate RPV except shop id 78.**
+**Created a new dataframe with a uniqueCustomerCount column to calculate RPV except shop id 78.**
 
        shop_id_list = []
        revenue_list2 = []
