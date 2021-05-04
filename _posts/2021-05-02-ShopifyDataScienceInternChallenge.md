@@ -238,117 +238,16 @@ shop_id is 100 and Revenue is 8547<br>
 <img src="{{ site.url }}{{ site.baseurl }}/images/shopify15.PNG" alt="shopify15.PNG">
 <img src="{{ site.url }}{{ site.baseurl }}/images/shopify16.PNG" alt="shopify16.PNG">
 
-shop_id 	revenue 	uniqueCustomerCount 	Revenue_Per_Visitor<br>
-0 	1 	       13588 	       42 	              323.523810<br>
-1 	2 	       9588   	51 	              188.000000<br>
-2 	3 	       14652  	48     	       305.250000<br>
-3 	4      	13184  	45     	       292.977778<br>
-4 	5 	       13064 	       44 	              296.909091<br>
-5 	6      	22627   	53            	426.924528<br>
-6 	7      	12208  	47 	              259.744681<br>
-7 	8      	11088 	       42            	264.000000<br>
-8 	9 	       13806  	56            	246.535714<br>
-9 	10 	       17612  	48 	              366.916667<br>
-10 	11     	17480 	       48     	       364.166667<br>
-11 	12 	       18693 	       47            	397.723404<br>
-12 	13 	       21760  	56            	388.571429<br>
-13 	14 	       14036  	54            	259.925926<br>
-14 	15 	       16065        	49 	              327.857143<br>
-15 	16 	       11076  	41            	270.146341<br>
-16 	17 	       17600   	48            	366.666667<br>
-17 	18     	17472  	47            	371.744681<br>
-18 	19     	20538  	60 	              342.300000<br>
-19 	20     	13081 	       47            	278.319149<br>
-20 	21     	14200   	41            	346.341463<br>
-21 	22     	13140  	44            	298.636364<br>
-22 	23     	17472   	52            	336.000000<br>
-23 	24 	       17640 	       52            	339.230769<br>
-24 	25 	       11180 	       45            	248.444444<br>
-25 	26 	       16720   	47            	355.744681<br>
-26 	27 	       18083   	52            	347.750000<br>
-27 	28 	       13776 	       43 	              320.372093<br>
-28 	29 	       19234  	50            	384.680000<br>
-29 	30 	       16524  	48 	              344.250000<br>
-30 	31 	       12642  	47            	268.978723<br>
-31 	32 	       7979   	39            	204.589744<br>
-32 	33     	15051 	       39            	385.923077<br>
-33 	34     	11712  	45            	260.266667<br>
-34 	35     	17056 	       50            	341.120000<br>
-35 	36     	12740   	48            	265.416667<br>
-36 	37 	       16330 	       44             	371.136364<br>
-37 	38     	13680   	34            	402.352941<br>
-38 	39 	       10988  	35            	313.942857<br>
-39 	40     	14168 	       46            	308.000000<br>
-40 	41 	       14986   	53            	282.754717<br>
-41 	42     	22176 	       30 	              739.200000<br>
-43 	44     	10224 	       34 	              300.705882<br>
-44 	45     	15620  	50 	              312.400000<br>
-45 	46           	14940   	43            	347.441860<br>
-46 	47 	       12180  	44            	276.818182<br>
-47 	48 	       9711 	       37            	262.459459<br>
-48 	49     	14835         49            	302.755102<br>
-49 	50 	       17756 	       40             	443.900000<br>
-50 	51     	16643   	43             	387.046512<br>
-51 	52     	12994 	       40            	324.850000<br>
-52 	53 	       14560  	60            	242.666667<br>
-53 	54 	       13832  	48 	              288.166667<br>
-54 	55 	       15732  	45            	349.600000<br>
-55 	56 	       8073   	34            	237.441176<br>
-56 	57 	       15729   	50            	314.580000<br>
-57 	58 	       15042  	51            	294.941176<br>
-58 	59 	       21538 	       54            	398.851852<br>
-59 	60 	       16461  	43            	382.813953<br>
-60 	61     	17222  	44            	391.409091<br>
-61 	62 	       13280 	       39            	340.512821<br>
-62 	63 	       15368 	       50            	307.360000<br>
-63 	64     	11704   	42      	       278.666667<br>
-64 	65 	       17864  	49            	364.571429<br>
-65 	66     	16583 	       46            	360.500000<br>
-66 	67 	       10087 	       35            	288.200000<br>
-67 	68 	       11968 	       44            	272.000000<br>
-68 	69     	15851  	55            	288.200000<br>
-69 	70 	       20241  	56            	361.446429<br>
-70 	71 	       21320  	62             	343.870968<br>
-71 	72 	       14240  	42            	339.047619<br>
-72 	73 	       19470  	50            	389.400000<br>
-73 	74     	11628 	       37             	314.270270<br>
-74 	75     	10112  	40            	252.800000<br>
-75 	76     	13485        	39 	              345.769231<br>
-76 	77     	14040  	49            	286.530612<br>
-77 	78 	       0 	       0 	              NaN<br>
-78 	79     	17738  	50            	354.760000<br>
-79 	80 	       13485  	41             	328.902439<br>
-80 	81     	22656 	       54            	419.555556<br>
-81 	82     	14691  	40            	367.275000<br>
-82 	83 	       10449   	39 	              267.923077<br>
-83 	84     	20196 	       53 	              381.056604<br>
-84 	85     	11524  	34             	338.941176<br>
-85 	86     	14430  	46            	313.695652<br>
-86 	87 	       15198   	48            	316.625000<br>
-87 	88 	       17776 	       45            	395.022222<br>
-88 	89     	23128  	56            	413.000000<br>
-89 	90 	       19758   	45            	439.066667<br>
-90 	91 	       17600  	49            	359.183673<br>
-91 	92 	       6840    	40            	171.000000<br>
-92 	93 	       12654   	53            	238.754717<br>
-93 	94     	13400 	       43 	              311.627907<br>
-94 	95 	       12432 	       35 	              355.200000<br>
-95 	96 	       16830   	47             	358.085106<br>
-96 	97     	15552   	42            	370.285714<br>
-97 	98     	14231 	       53 	              268.509434<br>
-98 	99 	       18330  	49            	374.081633<br>
-99 	100 	       8547 	       36 	              237.416667<br>
-
 
 ### Question 2
 
-a. How many orders were shipped by Speedy Express in total?
+a. How many orders were shipped by Speedy Express in total? - **54**
 
        SELECT COUNT(OrderID) AS OrderCount FROM Orders INNER JOIN Shippers ON Shippers.ShipperID = Orders.ShipperID WHERE Shippers.ShipperName = 'Speedy Express';
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/shopify4.PNG" alt="shopify4.PNG">
 
-b. What is the last name of the employee with the most orders?
+b. What is the last name of the employee with the most orders? - **Peacook with 40 orders**
 
        SELECT TOP 1 LastName, COUNT(OrderID)
        from Orders
@@ -358,7 +257,7 @@ b. What is the last name of the employee with the most orders?
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/shopify5.PNG" alt="shopify5.PNG">
 
-c. What product was ordered the most by customers in Germany?
+c. What product was ordered the most by customers in Germany? **Boston Crab Meat was ordered the most in Germany with 160 sold**
 
        SELECT TOP 1 Products.ProductID, Products.ProductName, SUM(OrderDetails.Quantity) AS NumberOfProductsSold
        from Products, OrderDetails, Orders, Customers
