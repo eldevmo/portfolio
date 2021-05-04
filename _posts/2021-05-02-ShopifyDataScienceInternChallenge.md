@@ -10,53 +10,53 @@ hidden: "true"
 ---
 ## Fall 2021 Data Science Intern Challenge 
 ### Question 1
-import pandas as pd
-import numpy as np
-import statsmodels.api as sm
-import scipy, scipy.stats
-import matplotlib.pyplot as plt
-import seaborn as sns
-from matplotlib.pyplot import scatter
+       import pandas as pd
+       import numpy as np
+       import statsmodels.api as sm
+       import scipy, scipy.stats
+       import matplotlib.pyplot as plt
+       import seaborn as sns
+       from matplotlib.pyplot import scatter
 
 
 **a. Think about what could be going wrong with our calculation. Think about a better way to evaluate this data.**
 
-df = pd.read_excel(r'C:\Users\Lim\Desktop\resume\2021 Winter Data Science Intern Challenge Data Set.xlsx', encoding="ISO-8859-1")
-df.describe()
+       df = pd.read_excel(r'C:\Users\Lim\Desktop\resume\2021 Winter Data Science Intern Challenge Data Set.xlsx', encoding="ISO-8859-1")
+       df.describe()
 
- 	    order_id 	    shop_id 	    user_id 	    order_amount 	total_items
-count 	5000.000000 	5000.000000 	5000.000000 	5000.000000 	5000.00000
-mean 	2500.500000 	50.078800 	    849.092400 	    3145.128000 	8.78720
-std 	1443.520003 	29.006118 	    87.798982 	    41282.539349 	116.32032
-min 	1.000000 	    1.000000 	    607.000000 	    90.000000 	    1.00000
-25% 	1250.750000 	24.000000 	    775.000000 	    163.000000 	    1.00000
-50% 	2500.500000 	50.000000 	    849.000000 	    284.000000 	    2.00000
-75% 	3750.250000 	75.000000 	    925.000000 	    390.000000 	    3.00000
-max 	5000.000000 	100.000000 	    999.000000 	    704000.000000 	2000.00000
+ 	order_id 	shop_id 	    user_id 	           order_amount 	       total_items
+count 	5000.000000 	5000.000000 	    5000.000000 	    5000.000000 	       5000.00000
+mean 	2500.500000 	50.078800 	    849.092400 	    3145.128000 	       8.78720
+std 	1443.520003 	29.006118 	    87.798982 	    41282.539349 	       116.32032
+min 	1.000000 	1.000000 	    607.000000 	    90.000000 	       1.00000
+25% 	1250.750000 	24.000000 	    775.000000 	    163.000000 	       1.00000
+50% 	2500.500000 	50.000000 	    849.000000 	    284.000000 	       2.00000
+75% 	3750.250000 	75.000000 	    925.000000 	    390.000000 	       3.00000
+max 	5000.000000 	100.000000 	    999.000000 	    704000.000000 	       2000.00000
 
 **As it is mentioned in the given file, the AOV is $3145.13**
 
 **To check any outliers, columns are plotted**
-sns.set(style = "ticks")
-sns.pairplot(df)
+       sns.set(style = "ticks")
+       sns.pairplot(df)
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/graph6.png" alt="shopify1.png">
 
 **It is found that there is a distinct dot where total_times is greater than 1500 and order_amount is lower than 500000**
-print(np.where((df['total_items'] > 1500) & (df['order_amount'] > 500000)))
+       print(np.where((df['total_items'] > 1500) & (df['order_amount'] > 500000)))
 
 (array([  15,   60,  520, 1104, 1362, 1436, 1562, 1602, 2153, 2297, 2835,
        2969, 3332, 4056, 4646, 4868, 4882], dtype=int64),)
 
 **It is found that these indexes are outliers**
-df.iloc[[  15,   60,  520, 1104, 1362, 1436, 1562, 1602, 2153, 2297, 2835,
-       2969, 3332, 4056, 4646, 4868, 4882]]
+       df.iloc[[  15,   60,  520, 1104, 1362, 1436, 1562, 1602, 2153, 2297, 2835,
+              2969, 3332, 4056, 4646, 4868, 4882]]
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/graph6.png" alt="shopify2.png">
 
 **Drop the outliers to verify the data properly**
-df2 = df.drop([15, 60, 520, 1104, 1362, 1436, 1562, 1602, 2153, 2297, 2835,
-       2969, 3332, 4056, 4646, 4868, 4882])
+       df2 = df.drop([15, 60, 520, 1104, 1362, 1436, 1562, 1602, 2153, 2297, 2835,
+              2969, 3332, 4056, 4646, 4868, 4882])
 
 **b. What metric would you report for this dataset?**
 
@@ -64,13 +64,13 @@ df2 = df.drop([15, 60, 520, 1104, 1362, 1436, 1562, 1602, 2153, 2297, 2835,
 **RPV is a metric where Conversion rate and Average order value are combined, RPV = Total Revenue / Total Unique Visitors**
 
 **Calculated Revenues for each shop to get RPV**
-revenue_list = []
-uniqueShopidCount = len(df2['shop_id'].unique())
+       revenue_list = []
+       uniqueShopidCount = len(df2['shop_id'].unique())
 
-for i in range(1, uniqueShopidCount+1):
-    revenue = df2.loc[df2['shop_id'] == i, 'order_amount'].sum()
-    revenue_list.append(revenue)
-    print('shop_id is', i, 'and Revenue is', revenue)
+       for i in range(1, uniqueShopidCount+1):
+       revenue = df2.loc[df2['shop_id'] == i, 'order_amount'].sum()
+       revenue_list.append(revenue)
+       print('shop_id is', i, 'and Revenue is', revenue)
 
 shop_id is 1 and Revenue is 13588
 shop_id is 2 and Revenue is 9588
@@ -173,20 +173,24 @@ shop_id is 98 and Revenue is 14231
 shop_id is 99 and Revenue is 18330
 shop_id is 100 and Revenue is 8547
 
-len(range(uniqueShopidCount))
-revenue_max = np.max(revenue_list)
-print(revenue_max) **Max. revenue is 2263800 - shop id 78 has the max. revenue**
+       len(range(uniqueShopidCount))
+       revenue_max = np.max(revenue_list)
+       print(revenue_max) 
+**Max. revenue is 2263800 - shop id 78 has the max. revenue**
 
-uniqueCustomer_78shopId = df2.loc[df2['shop_id'] == 78, 'user_id'].unique()
-print(uniqueCustomer_78shopId) **Unique customers are printed for shop id 78**
+       uniqueCustomer_78shopId = df2.loc[df2['shop_id'] == 78, 'user_id'].unique()
+       print(uniqueCustomer_78shopId) 
+**Unique customers are printed for shop id 78**
 
-countCustomer_78shopId = len(uniqueCustomer_78shopId)
-print(countCustomer_78shopId) **Counted number of unique customers**
+       countCustomer_78shopId = len(uniqueCustomer_78shopId)
+       print(countCustomer_78shopId) 
+**Counted number of unique customers**
 
-Revenue_Per_Visitor_78shopId = revenue_max/countCustomer_78shopId
-print(Revenue_Per_Visitor_78shopId) **RPV found is over $50306.67 which seems not right**
+       Revenue_Per_Visitor_78shopId = revenue_max/countCustomer_78shopId
+       print(Revenue_Per_Visitor_78shopId) 
+**RPV found is over $50306.67 which seems not right**
 
-df2.loc[df['shop_id'] == 78] 
+       df2.loc[df['shop_id'] == 78] 
 **Checked the order_amount for shop id 78; it turns out that per pair of shoes, the price is over $25725 so I decided to drop shop id 78**
 
 2263800
@@ -244,34 +248,37 @@ df2.loc[df['shop_id'] == 78]
 4715 	4716 	       78 	       818 	       77175   	3 	       debit 	              2017-03-05 05:10:43.633
 4918 	4919 	       78     	823    	25725  	1      	cash          	2017-03-15 13:26:46.262
 
-df3 = df2[df2.shop_id != 78] # Dropped shop id 78 values in the dataframe
+       df3 = df2[df2.shop_id != 78] 
+**Dropped shop id 78 values in the dataframe**
 
-shop_id_list = []
-revenue_list2 = []
-uniqueCustomer_list = []
-uniqueShopidCount2 = len(df3['shop_id'].unique())
+       shop_id_list = []
+       revenue_list2 = []
+       uniqueCustomer_list = []
+       uniqueShopidCount2 = len(df3['shop_id'].unique())
 
-for i in range(1, uniqueShopidCount2+2):
-    revenue = df3.loc[df3['shop_id'] == i, 'order_amount'].sum()
-    uniqueCustomer = len(df3.loc[df3['shop_id'] == i, 'user_id'].unique())
-    revenue_list2.append(revenue)
-    shop_id_list.append(i)
-    uniqueCustomer_list.append(uniqueCustomer)
+       for i in range(1, uniqueShopidCount2+2):
+       revenue = df3.loc[df3['shop_id'] == i, 'order_amount'].sum()
+       uniqueCustomer = len(df3.loc[df3['shop_id'] == i, 'user_id'].unique())
+       revenue_list2.append(revenue)
+       shop_id_list.append(i)
+       uniqueCustomer_list.append(uniqueCustomer)
 
-df4 = pd.DataFrame({"shop_id":shop_id_list,
-                  "revenue":revenue_list2,
-                   "uniqueCustomerCount":uniqueCustomer_list})
+       df4 = pd.DataFrame({"shop_id":shop_id_list,
+                     "revenue":revenue_list2,
+                     "uniqueCustomerCount":uniqueCustomer_list})
 
-df4 **Created a new dataframe to calculate RPV**
+       df4 
+
+**Created a new dataframe to calculate RPV**
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/graph6.png" alt="shopify3.png">
 
 **c. What is its value?**
 
-Revenue_Per_Visitor = df4['revenue']/df4['uniqueCustomerCount']
-pd.set_option("max_rows", None)
-df4['Revenue_Per_Visitor'] = Revenue_Per_Visitor
-df4
+       Revenue_Per_Visitor = df4['revenue']/df4['uniqueCustomerCount']
+       pd.set_option("max_rows", None)
+       df4['Revenue_Per_Visitor'] = Revenue_Per_Visitor
+       df4
 **Added RPV column in the dataframe. Finally, there is no distinct data. The RPV values are found for each shop id**
 **I chose to show RPV for each shop id since having this for each shop id is more accurate and able to check any outliers**
 
@@ -382,30 +389,30 @@ df4
 
 a. How many orders were shipped by Speedy Express in total?
 
-SELECT COUNT(OrderID) AS OrderCount FROM Orders INNER JOIN Shippers ON Shippers.ShipperID = Orders.ShipperID WHERE Shippers.ShipperName = 'Speedy Express';
+       SELECT COUNT(OrderID) AS OrderCount FROM Orders INNER JOIN Shippers ON Shippers.ShipperID = Orders.ShipperID WHERE Shippers.ShipperName = 'Speedy Express';
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/graph6.png" alt="shopify4.png">
 
 b. What is the last name of the employee with the most orders?
 
-SELECT TOP 1 LastName, COUNT(OrderID)
-from Orders
-inner join Employees ON Employees.EmployeeID = Orders.EmployeeID
-GROUP BY Employees.EmployeeID, Employees.LastName
-ORDER BY COUNT(OrderID) DESC
+       SELECT TOP 1 LastName, COUNT(OrderID)
+       from Orders
+       inner join Employees ON Employees.EmployeeID = Orders.EmployeeID
+       GROUP BY Employees.EmployeeID, Employees.LastName
+       ORDER BY COUNT(OrderID) DESC
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/graph6.png" alt="shopify5.png">
 
 c. What product was ordered the most by customers in Germany?
 
-SELECT TOP 1 Products.ProductID, Products.ProductName, SUM(OrderDetails.Quantity) AS NumberOfProductsSold
-from Products, OrderDetails, Orders, Customers
-where Products.ProductID = OrderDetails.ProductID
-and OrderDetails.OrderID = Orders.OrderID
-and Customers.CustomerID = Orders.CustomerID
-and Customers.Country = 'Germany'
-GROUP BY Products.ProductID, Products.ProductName
-ORDER BY SUM(OrderDetails.Quantity) DESC
+       SELECT TOP 1 Products.ProductID, Products.ProductName, SUM(OrderDetails.Quantity) AS NumberOfProductsSold
+       from Products, OrderDetails, Orders, Customers
+       where Products.ProductID = OrderDetails.ProductID
+       and OrderDetails.OrderID = Orders.OrderID
+       and Customers.CustomerID = Orders.CustomerID
+       and Customers.Country = 'Germany'
+       GROUP BY Products.ProductID, Products.ProductName
+       ORDER BY SUM(OrderDetails.Quantity) DESC
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/graph6.png" alt="shopify6.png">
 
