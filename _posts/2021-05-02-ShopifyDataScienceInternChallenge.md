@@ -26,7 +26,7 @@ hidden: "true"
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/shopify7.PNG" alt="shopify7.PNG">
 
-**As it is mentioned in the given file, It is shown in the summary statistics that the AOV is $3145.13.**
+**As it is mentioned in the given file, it is shown in the summary statistics that the AOV is $3145.13.**
 
 **To check any outliers, columns are plotted.**
        
@@ -47,13 +47,13 @@ hidden: "true"
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/shopify2.PNG" alt="shopify2.PNG">
 
-**Droped the outliers to verify the data properly.**
+**Dropped the outliers to verify the data properly.**
 
        df2 = df.drop([15, 60, 520, 1104, 1362, 1436, 1562, 1602, 2153, 2297, 2835, 2969, 3332, 4056, 4646, 4868, 4882])
 
-**b. What metric would you report for this dataset?.**
+**b. What metric would you report for this dataset?**
 
-**I chose to report RPV (Revenue_Per_Visitor) since this gives a better idea of the overall health of a eCommerce store.**<br>
+**I chose to report RPV (Revenue_Per_Visitor) since this gives a better idea of the overall health of an eCommerce store.**<br>
 **RPV is a metric where Conversion rate and Average order value are combined, RPV = Total Revenue / Total Unique Visitors.**<br>
 
 **Calculated Revenues for each shop to get RPV.**<br>
@@ -192,7 +192,7 @@ shop_id is 100 and Revenue is 8547<br>
 
 45<br>
 
-**RPV found is over $50306.67 which seems not right.**
+**RPV found is over $50306.67 which seems too high.**
 
        Revenue_Per_Visitor_78shopId = revenue_max/countCustomer_78shopId
        print(Revenue_Per_Visitor_78shopId) 
@@ -235,7 +235,7 @@ shop_id is 100 and Revenue is 8547<br>
 **c. What is its value?**
 
 **Added RPV column in the dataframe. Finally, there is no distinct data. The RPV values are found for each shop id.**<br>
-**I chose to show RPV for each shop id since having this for each shop id is more accurate and able to check any outliers.**
+**I chose to show RPV for each shop id since having this for each shop id is more accurate and able to check for any outliers.**
 
        Revenue_Per_Visitor = df4['revenue']/df4['uniqueCustomerCount']
        pd.set_option("max_rows", None)
