@@ -6,6 +6,7 @@ header:
     image: "/images/projects.jpg"
 excerpt: "Reducing the ratio of bike collisions among bike sharing riders in Toronto"
 mathjax: "true"
+hidden: "true"
 ---
 ## Data Science Certificate Group Project
 ### Goal
