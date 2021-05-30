@@ -1,7 +1,7 @@
 ---
 title: "Pitch for Data Scientist Role"
 date: 2021-05-30
-tags: 
+tags: [Data Science]
 header:
     image: "/images/projects.jpg"
 excerpt: "Pitch for Data Scientist Role"
